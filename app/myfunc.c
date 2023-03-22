@@ -8,7 +8,7 @@ int myfunc(int b) {
     buffer [0] = b + 4;
     // здесь должен ругаться sonarcloud, т.к. утечка памяти
     return buffer[0];
-    free(buffer)
+    free(buffer);
 
 }
 
