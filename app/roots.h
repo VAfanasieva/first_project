@@ -2,10 +2,12 @@
 #define ROOTS_H
 
 typedef struct {
-    long x1;
-    long x2;
+    double count_roots;
+    double x1;
+    double x2;
 } roots;
 
-roots decision(long a,long b,long c);
+roots decision(double a,double b,double c);
+extern int val;
 
 #endif
