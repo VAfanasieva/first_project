@@ -7,8 +7,12 @@ roots decision(double a,double b,double c){
     double d;
 
     if(a == 0){
-        rez.x1 = (-c) / b;
+        if(b == 0){
+            rez.count_roots = 0;
+            return rez;
+        }
         rez.count_roots = 1;
+        rez.x1 = (-c) / b;
         return rez;
     }
 
