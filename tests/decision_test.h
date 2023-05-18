@@ -35,6 +35,8 @@ TEST(decisionTest, num_roots_1){
 
 TEST(decisionTest, num_roots_0) {
     ASSERT_EQ(decision(1, -5, 9).count_roots, 0);
+    ASSERT_EQ(decision(0, 0, 8).count_roots, 0);
+    ASSERT_EQ(decision(0, 0, 0).count_roots, 0);
 
 }
 
