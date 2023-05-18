@@ -12,36 +12,43 @@ extern "C" {
 }
 
 TEST(decisionTest, num_roots_2) {
+    ASSERT_EQ(decision(-1, 7, 8).count_roots, 2); 
     ASSERT_EQ(decision(-1, 7, 8).x1, -1);
     ASSERT_EQ(decision(-1, 7, 8).x2, 8);
 }
 
 TEST(decisionTest, doudle_roots){
+    ASSERT_EQ(decision(1.2, 3, -5.6).count_roots, 2);
     ASSERT_EQ(decision(1.2, 3, -5.6).x1, 1.2458298553119895);
     ASSERT_EQ(decision(1.2, 3, -5.6).x2, -3.7458298553119893);
 
 
 }
 TEST(decisionTest, big_roots){
+    ASSERT_EQ(decision(1234567563, 345345, -43534433).count_roots, 2);
     ASSERT_EQ(decision(1234567563, 345345, -43534433).x1, 0.1876443730020721);
     ASSERT_EQ(decision(1234567563, 345345, -43534433).x2, -0.18792410252870959);
 
 }
 
 TEST(decisionTest, num_roots_1){
+    ASSERT_EQ(decision(1, -4, 4).count_roots, 1);
     ASSERT_EQ(decision(1, -4, 4).x1, 2);
 
 }
 
 TEST(decisionTest, num_roots_0) {
-    ASSERT_EQ(decision(1, -5, 9).count_roots, 0);
-    ASSERT_EQ(decision(0, 0, 8).count_roots, 0);
-    ASSERT_EQ(decision(0, 0, 0).count_roots, 0);
-
+    ASSERT_EQ(decision(1, -5, 9).count_roots, 0); 
 }
 
-TEST(decisionTest, not_square) {
+TEST(decisionTest, not_square_1) {
+    ASSERT_EQ(decision(0, 2, 8).count_roots, 1); 
     ASSERT_EQ(decision(0, 2, 8).x1, -4);
+}
+
+TEST(decisionTest, not_square_2) {
+    ASSERT_EQ(decision(0, 0, 9).count_roots, 0); 
+    ASSERT_EQ(decision(0, 0, 0).count_roots, 0); 
 }
 
 TEST(decisionTest, inputFile) {
